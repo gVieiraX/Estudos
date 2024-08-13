@@ -1,28 +1,41 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Threading;
 
 namespace StopWatch{
     class Program
     {
         static void Main(string[] args)
         {
-            // Cria uma instância do Stopwatch
-            Stopwatch stopwatch = new Stopwatch();
+            Menu();
+        }
 
-            // Inicia o Stopwatch
-            stopwatch.Start();
+        static void Menu(){
+            Console.Clear();
+            Console.WriteLine("S = Segundo");
+            Console.WriteLine("M = Minuto");
+            Console.WriteLine("0 = Sair");
+            Console.WriteLine("Quanto tempo deseja contar? ");
 
-            // Simula uma operação que leva tempo (por exemplo, um loop)
-            for (int i = 0; i < 1000000; i++)
-            {
-                // Operação simulada
+            string data = Console.ReadLine().ToLower();
+            char type = char.Parse(data.Substring(data.Length-1,1));
+            Console.WriteLine(data);
+            Console.WriteLine(type);
+
+            
+
+        }
+        static void Start(int time)
+        {
+            int currentTime = 0;
+          
+            while(currentTime != time){
+                currentTime++;
+                Console.WriteLine(currentTime);
+                Thread.Sleep(1000);
             }
-
-            // Para o Stopwatch
-            stopwatch.Stop();
-
-            // Exibe o tempo decorrido em milissegundos
-            Console.WriteLine($"Tempo decorrido: {stopwatch.ElapsedMilliseconds} ms");
+            Console.Clear();
+            Console.WriteLine("StopWatch finished");
+            Thread.Sleep(2500);
         }
     }
 }

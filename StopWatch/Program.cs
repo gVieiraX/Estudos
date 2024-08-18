@@ -53,10 +53,8 @@ namespace StopWatch{
 
             Console.Clear();
             Console.WriteLine("StopWatch finished");
-            Thread.Sleep(1900);
+            Thread.Sleep(1800);
             Menu();
-
-
         }
     }
 }

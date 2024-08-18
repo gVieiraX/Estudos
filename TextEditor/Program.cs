@@ -5,7 +5,8 @@ namespace TextEditor{
     {
         static void Main(string[] args)
         {
-            
+            Menu();
+            Edit();
         }
 
         static void Menu(){
@@ -20,12 +21,26 @@ namespace TextEditor{
                 case 0 :System.Environment.Exit(0); break;
                 case 1: Open();break;
                 case 2:Edit();break;
+                default: Menu();break;
             }
         }
 
         static void Open(){}
         
-        static void Edit(){}
+        static void Edit(){
+            Console.Clear();
+            Console.WriteLine("Digite seu texto abaixo");
+            Console.WriteLine("----------");
+            string text = "";
+        
+        do{
+            text += Console.ReadLine();
+            text += Environment.NewLine;
+        }
+        while (Console.ReadKey().Key != ConsoleKey.Escape);
+
+        Console.WriteLine(text);    
+        }
    
     }
 }

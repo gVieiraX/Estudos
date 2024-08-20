@@ -56,7 +56,6 @@ class Program
             Console.WriteLine(TimeZoneInfo.ConvertTimeFromUtc(utcdateTime, timezone));
             Console.WriteLine("------------------");
             
-            
             Console.Clear();
 
             var timeSpan = new TimeSpan();

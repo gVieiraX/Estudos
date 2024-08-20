@@ -94,7 +94,6 @@ class Program
         {
             return today == DayOfWeek.Saturday || today == DayOfWeek.Sunday;
         }
-
-
+        
     }
 }

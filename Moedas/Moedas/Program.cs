@@ -19,6 +19,5 @@ class Program
         Console.WriteLine(
             Math.Round(valorMoedas)
             );
-        
     }
 }
